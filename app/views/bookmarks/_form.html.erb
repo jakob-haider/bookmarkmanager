@@ -1,0 +1,47 @@
+<%= form_with(model: bookmark, local: true) do |form| %>
+  <% if bookmark.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bookmark.errors.count, "error") %> prohibited this bookmark from being saved:</h2>
+
+      <ul>
+      <% bookmark.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :bookmark_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :url %>
+    <%= form.text_field :url, id: :bookmark_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :index %>
+    <%= form.number_field :index, id: :bookmark_index %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dateadded %>
+    <%= form.datetime_select :dateadded, id: :bookmark_dateadded %>
+  </div>
+
+  <div class="field">
+    <%= form.label :folder_id %>
+    <%= form.text_field :folder_id, id: :bookmark_folder_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tags_id %>
+    <%= form.text_field :tags_id, id: :bookmark_tags_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

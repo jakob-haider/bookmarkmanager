@@ -1,0 +1,22 @@
+<h1>Editing Folder</h1>
+
+<%= render 'form', folder: @folder %>
+
+<%= link_to 'Show', @folder %> |
+<%= link_to 'Back', folders_path %>
+
+
+<form>
+  <fieldset>
+    <input id="target" type="text" value="Hello there">
+  </fieldset>
+</form>
+<div id="other">
+  Trigger the handler
+</div>
+
+<script>
+    $("#target").keypress(function () {
+        console.log("Handler for .keypress() called.");
+    });
+</script>

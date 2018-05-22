@@ -1,0 +1,42 @@
+<%= form_with(model: folder, local: true) do |form| %>
+  <% if folder.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(folder.errors.count, "error") %> prohibited this folder from being saved:</h2>
+
+      <ul>
+      <% folder.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :exportid %>
+    <%= form.number_field :exportid, id: :folder_exportid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :parent_id %>
+    <%= form.text_field :parent_id, id: :folder_parent_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :folder_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :index %>
+    <%= form.number_field :index, id: :folder_index %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dateadded %>
+    <%= form.datetime_select :dateadded, id: :folder_dateadded %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

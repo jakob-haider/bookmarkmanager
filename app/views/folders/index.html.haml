@@ -1,0 +1,30 @@
+-#-#- @folders.each do |f|
+-#-#  - if f.is_rootparent?
+-#-#    = link_to f.title, f, class:"btn btn-warning"
+-#-#  - elsif f.decayed?
+-#-#    = link_to f.title, f, class:"btn btn-primary"
+-#-#  - else
+-#-#    = link_to f.title, f, class:"btn btn-secondary"- @folders.each do |f|
+-#
+-#
+%header
+  .container_background
+    .container_marks
+      - @folders.each do |f|
+        - if f.is_rootparent?
+          =link_to f do
+            .bm_vert
+              %p= f.title
+  .container_left
+    -#.bm_base_down
+      hello hello
+    .container_folders_tags
+      .bm_horiz.selected
+        %p hey bookmark
+      .tag_down
+      .bm_horiz
+      .bm_horiz
+      .bm_horiz
+      .bm_horiz
+.mainbody
+  -#.window_up

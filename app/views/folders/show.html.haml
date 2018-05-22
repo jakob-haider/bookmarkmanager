@@ -1,0 +1,5 @@
+%h3= @folder.title
+
+- @bookmarks.each do |b|
+  %ul.folders
+    %li= link_to b.title, b

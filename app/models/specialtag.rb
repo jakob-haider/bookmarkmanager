@@ -1,0 +1,2 @@
+class Specialtag < ApplicationRecord
+end

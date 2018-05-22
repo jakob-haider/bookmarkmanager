@@ -1,0 +1,23 @@
+// Place all the styles related to the Folders controller here.
+// They will automatically be included in application.css.scss.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.selected{
+    background: yellow;
+}
+
+body{
+  margin-left: 10px;
+  background: yellow;
+}
+
+h3{
+  background: yellow;
+}
+
+a{
+  margin-bottom: 50px;
+  //&:visited {
+  //  text-decoration: none;
+  //}
+}

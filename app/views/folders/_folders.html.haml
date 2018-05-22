@@ -1,0 +1,9 @@
+%header
+  .container_background
+    .container_marks
+      - @folders.each do |f|
+        - if f.is_rootparent?
+          =link_to f do
+            .bm_vert
+              %p= f.title
+  .container_left
